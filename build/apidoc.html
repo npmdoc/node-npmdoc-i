@@ -1,0 +1,751 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://pksunkara.github.com/inflect"
+
+    >i (v0.3.5)</a>
+</h1>
+<h4>custom inflections for nodejs</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.i">module i</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.i">
+            function <span class="apidocSignatureSpan"></span>i
+            <span class="apidocSignatureSpan">(attach)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">i.</span>methods</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.i.methods">module i.methods</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.camelize">
+            function <span class="apidocSignatureSpan">i.methods.</span>camelize
+            <span class="apidocSignatureSpan">(lower_case_and_underscored_word, first_letter_in_uppercase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.classify">
+            function <span class="apidocSignatureSpan">i.methods.</span>classify
+            <span class="apidocSignatureSpan">(table_name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.dasherize">
+            function <span class="apidocSignatureSpan">i.methods.</span>dasherize
+            <span class="apidocSignatureSpan">(underscored_word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.demodulize">
+            function <span class="apidocSignatureSpan">i.methods.</span>demodulize
+            <span class="apidocSignatureSpan">(class_name_in_module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.foreign_key">
+            function <span class="apidocSignatureSpan">i.methods.</span>foreign_key
+            <span class="apidocSignatureSpan">(class_name, separate_class_name_and_id_with_underscore)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.humanize">
+            function <span class="apidocSignatureSpan">i.methods.</span>humanize
+            <span class="apidocSignatureSpan">(lower_case_and_underscored_word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.inflect">
+            function <span class="apidocSignatureSpan">i.methods.</span>inflect
+            <span class="apidocSignatureSpan">(inflections_function)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.ordinalize">
+            function <span class="apidocSignatureSpan">i.methods.</span>ordinalize
+            <span class="apidocSignatureSpan">(number)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.pluralize">
+            function <span class="apidocSignatureSpan">i.methods.</span>pluralize
+            <span class="apidocSignatureSpan">(word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.singularize">
+            function <span class="apidocSignatureSpan">i.methods.</span>singularize
+            <span class="apidocSignatureSpan">(word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.tableize">
+            function <span class="apidocSignatureSpan">i.methods.</span>tableize
+            <span class="apidocSignatureSpan">(class_name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.titleize">
+            function <span class="apidocSignatureSpan">i.methods.</span>titleize
+            <span class="apidocSignatureSpan">(word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.uncountability">
+            function <span class="apidocSignatureSpan">i.methods.</span>uncountability
+            <span class="apidocSignatureSpan">(word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.i.methods.underscore">
+            function <span class="apidocSignatureSpan">i.methods.</span>underscore
+            <span class="apidocSignatureSpan">(camel_cased_word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">i.methods.</span>inflections</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.i" id="apidoc.module.i">module i</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.i.i" id="apidoc.element.i.i">
+        function <span class="apidocSignatureSpan"></span>i
+        <span class="apidocSignatureSpan">(attach)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">i = function (attach) {
+  var methods = require(&#x27;./methods&#x27;);
+
+  if (attach) {
+    require(&#x27;./native&#x27;)(methods);
+  }
+
+  return methods
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.i.methods" id="apidoc.module.i.methods">module i.methods</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.camelize" id="apidoc.element.i.methods.camelize">
+        function <span class="apidocSignatureSpan">i.methods.</span>camelize
+        <span class="apidocSignatureSpan">(lower_case_and_underscored_word, first_letter_in_uppercase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">camelize = function (lower_case_and_underscored_word, first_letter_in_uppercase) {
+  var result;
+  if (first_letter_in_uppercase == null) first_letter_in_uppercase = true;
+  result = util.string.gsub(lower_case_and_underscored_word, /\/(.?)/, function($) {
+    return &#x22;.&#x22; + (util.string.upcase($[1]));
+  });
+  result = util.string.gsub(result, /(?:_)(.)/, function($) {
+    return util.string.upcase($[1]);
+  });
+  if (first_letter_in_uppercase) {
+    return util.string.upcase(result);
+  } else {
+    return util.string.downcase(result);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+inflect.singularize(&#x27;octopi&#x27;); // === &#x27;octopus&#x27;
+inflect.singularize(&#x27;Hats&#x27;); // === &#x27;Hat&#x27;
+```
+
+### Camelize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">camelize</span>(&#x27;message_properties&#x27;); // === &#x27;MessageProperties&#x27
+;
+inflect.camelize(&#x27;message_properties&#x27;, false); // === &#x27;messageProperties&#x27;
+```
+
+### Underscore
+
+```js
+inflect.underscore(&#x27;MessageProperties&#x27;); // === &#x27;message_properties&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.classify" id="apidoc.element.i.methods.classify">
+        function <span class="apidocSignatureSpan">i.methods.</span>classify
+        <span class="apidocSignatureSpan">(table_name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">classify = function (table_name) {
+  return inflect.camelize(inflect.singularize(util.string.gsub(table_name, /.*\./, &#x27;&#x27;)));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+inflect.tableize(&#x27;MessageBusProperty&#x27;); // === &#x27;message_bus_properties&#x27;
+```
+
+### Classify
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">classify</span>(&#x27;message_bus_properties&#x27;); // === &#x27;MessageBusProperty
+&#x27;
+```
+
+### Foreign key
+
+```js
+inflect.foreign_key(&#x27;MessageBusProperty&#x27;); // === &#x27;message_bus_property_id&#x27;
+inflect.foreign_key(&#x27;MessageBusProperty&#x27;, false); // === &#x27;message_bus_propertyid&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.dasherize" id="apidoc.element.i.methods.dasherize">
+        function <span class="apidocSignatureSpan">i.methods.</span>dasherize
+        <span class="apidocSignatureSpan">(underscored_word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dasherize = function (underscored_word) {
+  return util.string.gsub(underscored_word, /_/, &#x27;-&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+inflect.humanize(&#x27;message_id&#x27;); // === &#x27;Message&#x27;
+```
+
+### Dasherize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">dasherize</span>(&#x27;message_properties&#x27;); // === &#x27;message-properties&#x27
+;
+inflect.dasherize(&#x27;Message Properties&#x27;); // === &#x27;Message Properties&#x27;
+```
+
+### Titleize
+
+```js
+inflect.titleize(&#x27;message_properties&#x27;); // === &#x27;Message Properties&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.demodulize" id="apidoc.element.i.methods.demodulize">
+        function <span class="apidocSignatureSpan">i.methods.</span>demodulize
+        <span class="apidocSignatureSpan">(class_name_in_module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">demodulize = function (class_name_in_module) {
+  return util.string.gsub(class_name_in_module, /^.*\./, &#x27;&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+inflect.titleize(&#x27;message_properties&#x27;); // === &#x27;Message Properties&#x27;
+inflect.titleize(&#x27;message properties to keep&#x27;); // === &#x27;Message Properties to Keep&#x27;
+```
+
+### Demodulize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">demodulize</span>(&#x27;Message.Bus.Properties&#x27;); // === &#x27;Properties&#x27;
+```
+
+### Tableize
+
+```js
+inflect.tableize(&#x27;MessageBusProperty&#x27;); // === &#x27;message_bus_properties&#x27;
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.foreign_key" id="apidoc.element.i.methods.foreign_key">
+        function <span class="apidocSignatureSpan">i.methods.</span>foreign_key
+        <span class="apidocSignatureSpan">(class_name, separate_class_name_and_id_with_underscore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">foreign_key = function (class_name, separate_class_name_and_id_with_underscore) {
+  if (separate_class_name_and_id_with_underscore == null) {
+    separate_class_name_and_id_with_underscore = true;
+  }
+  return inflect.underscore(inflect.demodulize(class_name)) + (separate_class_name_and_id_with_underscore ? &#x22;_id&#x22; : &#x22;id&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+inflect.classify(&#x27;message_bus_properties&#x27;); // === &#x27;MessageBusProperty&#x27;
+```
+
+### Foreign key
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">foreign_key</span>(&#x27;MessageBusProperty&#x27;); // === &#x27;message_bus_property_id
+&#x27;
+inflect.foreign_key(&#x27;MessageBusProperty&#x27;, false); // === &#x27;message_bus_propertyid&#x27;
+```
+
+### Ordinalize
+
+```js
+inflect.ordinalize( &#x27;1&#x27; ); // === &#x27;1st&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.humanize" id="apidoc.element.i.methods.humanize">
+        function <span class="apidocSignatureSpan">i.methods.</span>humanize
+        <span class="apidocSignatureSpan">(lower_case_and_underscored_word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">humanize = function (lower_case_and_underscored_word) {
+  var human, result;
+  result = lower_case_and_underscored_word;
+  for (var i = 0; i &#x3c; inflect.inflections.humans.length; i++) {
+    human = inflect.inflections.humans[i];
+    result = util.string.gsub(result, human[0], human[1]);
+  }
+  result = util.string.gsub(result, /_id$/, &#x22;&#x22;);
+  result = util.string.gsub(result, /_/, &#x22; &#x22;);
+  return util.string.capitalize(result, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+inflect.underscore(&#x27;MessageProperties&#x27;); // === &#x27;message_properties&#x27;
+inflect.underscore(&#x27;messageProperties&#x27;); // === &#x27;message_properties&#x27;
+```
+
+### Humanize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">humanize</span>(&#x27;message_id&#x27;); // === &#x27;Message&#x27;
+```
+
+### Dasherize
+
+```js
+inflect.dasherize(&#x27;message_properties&#x27;); // === &#x27;message-properties&#x27;
+inflect.dasherize(&#x27;Message Properties&#x27;); // === &#x27;Message Properties&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.inflect" id="apidoc.element.i.methods.inflect">
+        function <span class="apidocSignatureSpan">i.methods.</span>inflect
+        <span class="apidocSignatureSpan">(inflections_function)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inflect = function (inflections_function) {
+  inflections_function(inflect.inflections);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.ordinalize" id="apidoc.element.i.methods.ordinalize">
+        function <span class="apidocSignatureSpan">i.methods.</span>ordinalize
+        <span class="apidocSignatureSpan">(number)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ordinalize = function (number) {
+  var _ref;
+  number = parseInt(number);
+  if ((_ref = Math.abs(number) % 100) === 11 || _ref === 12 || _ref === 13) {
+    return &#x22;&#x22; + number + &#x22;th&#x22;;
+  } else {
+    switch (Math.abs(number) % 10) {
+      case 1:
+        return &#x22;&#x22; + number + &#x22;st&#x22;;
+      case 2:
+        return &#x22;&#x22; + number + &#x22;nd&#x22;;
+      case 3:
+        return &#x22;&#x22; + number + &#x22;rd&#x22;;
+      default:
+        return &#x22;&#x22; + number + &#x22;th&#x22;;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+inflect.foreign_key(&#x27;MessageBusProperty&#x27;); // === &#x27;message_bus_property_id&#x27;
+inflect.foreign_key(&#x27;MessageBusProperty&#x27;, false); // === &#x27;message_bus_propertyid&#x27;
+```
+
+### Ordinalize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">ordinalize</span>( &#x27;1&#x27; ); // === &#x27;1st&#x27;
+```
+
+## Custom rules for inflection
+
+### Custom plural
+
+We can use regexp in any of these custom rules
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.pluralize" id="apidoc.element.i.methods.pluralize">
+        function <span class="apidocSignatureSpan">i.methods.</span>pluralize
+        <span class="apidocSignatureSpan">(word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pluralize = function (word) {
+  var plural, result;
+  result = word;
+  if (word === &#x27;&#x27; || inflect.uncountability(word)) {
+    return result;
+  } else {
+    for (var i = 0; i &#x3c; inflect.inflections.plurals.length; i++) {
+      plural = inflect.inflections.plurals[i];
+      result = util.string.gsub(result, plural[0], plural[1]);
+      if (word.match(plural[0]) != null) break;
+    }
+    return result;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var inflect = require(&#x27;i&#x27;)(true);
+```
+
+### Pluralize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">pluralize</span>(&#x27;person&#x27;); // === &#x27;people&#x27;
+inflect.pluralize(&#x27;octopus&#x27;); // === &#x27;octopi&#x27;
+inflect.pluralize(&#x27;Hat&#x27;); // === &#x27;Hats&#x27;
+```
+
+### Singularize
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.singularize" id="apidoc.element.i.methods.singularize">
+        function <span class="apidocSignatureSpan">i.methods.</span>singularize
+        <span class="apidocSignatureSpan">(word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">singularize = function (word) {
+  var result, singular;
+  result = word;
+  if (word === &#x27;&#x27; || inflect.uncountability(word)) {
+    return result;
+  } else {
+    for (var i = 0; i &#x3c; inflect.inflections.singulars.length; i++) {
+      singular = inflect.inflections.singulars[i];
+      result = util.string.gsub(result, singular[0], singular[1]);
+      if (word.match(singular[0])) break;
+    }
+    return result;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+inflect.pluralize(&#x27;octopus&#x27;); // === &#x27;octopi&#x27;
+inflect.pluralize(&#x27;Hat&#x27;); // === &#x27;Hats&#x27;
+```
+
+### Singularize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">singularize</span>(&#x27;people&#x27;); // === &#x27;person&#x27;
+inflect.singularize(&#x27;octopi&#x27;); // === &#x27;octopus&#x27;
+inflect.singularize(&#x27;Hats&#x27;); // === &#x27;Hat&#x27;
+```
+
+### Camelize
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.tableize" id="apidoc.element.i.methods.tableize">
+        function <span class="apidocSignatureSpan">i.methods.</span>tableize
+        <span class="apidocSignatureSpan">(class_name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tableize = function (class_name) {
+  return inflect.pluralize(inflect.underscore(class_name));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+inflect.demodulize(&#x27;Message.Bus.Properties&#x27;); // === &#x27;Properties&#x27;
+```
+
+### Tableize
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">tableize</span>(&#x27;MessageBusProperty&#x27;); // === &#x27;message_bus_properties
+&#x27;
+```
+
+### Classify
+
+```js
+inflect.classify(&#x27;message_bus_properties&#x27;); // === &#x27;MessageBusProperty&#x27;
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.titleize" id="apidoc.element.i.methods.titleize">
+        function <span class="apidocSignatureSpan">i.methods.</span>titleize
+        <span class="apidocSignatureSpan">(word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">titleize = function (word) {
+  var self;
+  self = inflect.humanize(inflect.underscore(word));
+  return util.string.capitalize(self);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var inflect = require(&#x27;i&#x27;)();
+```
+
+All the below api functions can be called directly on a string
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">titleize</span>(&#x27;messages to store&#x27;) // === &#x27;Messages To Store&#x27;
+&#x27;messages to store&#x27;.titleize // === &#x27;Messages To Store&#x27;
+```
+
+only if `true` is passed while initiating
+
+```js
+var inflect = require(&#x27;i&#x27;)(true);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.uncountability" id="apidoc.element.i.methods.uncountability">
+        function <span class="apidocSignatureSpan">i.methods.</span>uncountability
+        <span class="apidocSignatureSpan">(word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uncountability = function (word) {
+  return inflect.inflections.uncountables.some(function(ele, ind, arr) {
+    return word.match(new RegExp(&#x22;(\\b|_)&#x22; + ele + &#x22;$&#x22;, &#x27;i&#x27;)) != null;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        return &#x22;&#x22; + number + &#x22;th&#x22;;
+    }
+  }
+};
+
+// Checks a given word for uncountability
+//
+//     &#x22;money&#x22;.<span class="apidocCodeKeywordSpan">uncountability</span>()     // =&#x3e; true
+//     &#x22;my money&#x22;.uncountability()  // =&#x3e; true
+inflect.uncountability = function (word) {
+  return inflect.inflections.uncountables.some(function(ele, ind, arr) {
+    return word.match(new RegExp(&#x22;(\\b|_)&#x22; + ele + &#x22;$&#x22;, &#x27;i&#x27;)) != null;
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.i.methods.underscore" id="apidoc.element.i.methods.underscore">
+        function <span class="apidocSignatureSpan">i.methods.</span>underscore
+        <span class="apidocSignatureSpan">(camel_cased_word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">underscore = function (camel_cased_word) {
+  var self;
+  self = util.string.gsub(camel_cased_word, /\./, &#x27;/&#x27;);
+  self = util.string.gsub(self, /([A-Z]+)([A-Z][a-z])/, &#x22;$1_$2&#x22;);
+  self = util.string.gsub(self, /([a-z\d])([A-Z])/, &#x22;$1_$2&#x22;);
+  self = util.string.gsub(self, /-/, &#x27;_&#x27;);
+  return self.toLowerCase();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+inflect.camelize(&#x27;message_properties&#x27;); // === &#x27;MessageProperties&#x27;
+inflect.camelize(&#x27;message_properties&#x27;, false); // === &#x27;messageProperties&#x27;
+```
+
+### Underscore
+
+```js
+inflect.<span class="apidocCodeKeywordSpan">underscore</span>(&#x27;MessageProperties&#x27;); // === &#x27;message_properties&#x27
+;
+inflect.underscore(&#x27;messageProperties&#x27;); // === &#x27;message_properties&#x27;
+```
+
+### Humanize
+
+```js
+inflect.humanize(&#x27;message_id&#x27;); // === &#x27;Message&#x27;
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
