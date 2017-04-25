@@ -1,6 +1,6 @@
 # npmdoc-i
 
-#### api documentation for  [i (v0.3.5)](http://pksunkara.github.com/inflect)  [![npm package](https://img.shields.io/npm/v/npmdoc-i.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-i) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-i.svg)](https://travis-ci.org/npmdoc/node-npmdoc-i)
+#### basic api documentation for  [i (v0.3.5)](http://pksunkara.github.com/inflect)  [![npm package](https://img.shields.io/npm/v/npmdoc-i.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-i) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-i.svg)](https://travis-ci.org/npmdoc/node-npmdoc-i)
 
 #### custom inflections for nodejs
 
